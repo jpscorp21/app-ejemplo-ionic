@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Form1Page } from '../pages/form1/form1';
+import { Form2Page } from '../pages/form2/form2';
+import { Form3Page } from '../pages/form3/form3';
 
 // SERVICIOS
 
@@ -29,7 +31,8 @@ import { DataService } from '../services/data.service';
     MyApp,
     HomePage,
     ListPage,
-    Form1Page
+    //Formularios
+    Form1Page, Form2Page, Form3Page
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { DataService } from '../services/data.service';
     MyApp,
     HomePage,
     ListPage,
-    Form1Page
+    //Formularios
+    Form1Page, Form2Page, Form3Page
   ],
   providers: [
     StatusBar,
