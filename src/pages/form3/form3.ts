@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the Form3Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
-@IonicPage()
 @Component({
   selector: 'page-form3',
   templateUrl: 'form3.html',
 })
 export class Form3Page {
+
+  nombre = '';
+  apellido = '';
+  edad = 10;
+  ciudad = '';
+  barrio = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -22,4 +21,11 @@ export class Form3Page {
     console.log('ionViewDidLoad Form3Page');
   }
 
+  formulario() {
+    console.log(this.nombre);
+    console.log(this.apellido);
+    console.log(this.edad);
+    console.log(this.ciudad);
+    console.log(this.barrio);
+  }
 }

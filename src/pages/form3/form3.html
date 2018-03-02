@@ -13,38 +13,39 @@
         <ion-row>
           <ion-col>
             <ion-item>
-              <ion-input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"></ion-input>
+              <ion-input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" [(ngModel)]="nombre"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-item>
-              <ion-input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido"></ion-input>
+              <ion-input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" [(ngModel)]="apellido"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-item>
-              <ion-input type="number" id="edad" name="edad" placeholder="Ingrese su edad"></ion-input>
+              <ion-input type="number" id="edad" name="edad" placeholder="Ingrese su edad" [(ngModel)]="edad"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-item>
-              <ion-input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad"></ion-input>
+              <ion-input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad" [(ngModel)]="ciudad"></ion-input>
             </ion-item>
           </ion-col>
           <ion-col>
             <ion-item>
-              <ion-input type="text" id="barrio" name="barrio" placeholder="Ingrese su barrio"></ion-input>
+              <ion-input type="text" id="barrio" name="barrio" placeholder="Ingrese su barrio" [(ngModel)]="barrio"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
-          <button ion-button color="primary" block navPop>Aceptar</button>
+          <button ion-button color="primary" block (click)="formulario()">Aceptar</button>
+          <button ion-button color="primary" block navPop>Salir</button>
         </ion-row>
       </ion-grid>
     </form>

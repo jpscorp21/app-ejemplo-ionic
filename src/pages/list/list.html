@@ -3,21 +3,89 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Lista</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
+  <ion-list no-border>
+    <ion-list-header>
+      Clases
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon name="planet" item-start></ion-icon>
+      <ion-label>Astronomia</ion-label>
+      <ion-note item-end>
+        A la luna
+      </ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle checked="false"></ion-toggle>
+      <ion-label>Muggle Studies</ion-label>
+      <ion-icon name="body" item-start></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="leaf" item-start></ion-icon>
+      <ion-label>Herbologia</ion-label>
+      <ion-icon name="rose" item-end color="secondary"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="flask" item-start></ion-icon>
+      <ion-label>Pociones</ion-label>
+      <ion-note item-end>Venenos</ion-note>
+    </ion-item>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+
+  <ion-list>
+
+    <ion-list-header>
+      Actividades
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Encantacion</ion-label>
+      <ion-icon name="color-wand" item-start></ion-icon>
+      <ion-note item-end>Crucio!</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle checked="true"></ion-toggle>
+      <ion-label>Practicas Quidditch</ion-label>
+      <ion-icon name="brush" item-start></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="wine" item-start></ion-icon>
+      <ion-label>Bebidas</ion-label>
+      <ion-note item-end>Si, por favor</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Amigos
+    </ion-list-header>
+
+    <ion-item>
+      <ion-icon name="flash" item-start></ion-icon>
+      <ion-label>Harry</ion-label>
+      <ion-note item-end>El chico quien vive</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="book" item-start></ion-icon>
+      <ion-label>Hermoine</ion-label>
+      <ion-note item-end>Muggle-born</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="beer" item-start></ion-icon>
+      <ion-label>Ron</ion-label>
+      <ion-note item-end>Brillante</ion-note>
+    </ion-item>
+  </ion-list>
 </ion-content>
