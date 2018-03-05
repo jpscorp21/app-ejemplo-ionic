@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>SignUp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" [(ngModel)]="nombre"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" [(ngModel)]="apellido"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" [(ngModel)]="usuario"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="email" id="email" name="email" placeholder="Ingrese su email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="password" id="password" name="password" placeholder="Ingrese su password" [(ngModel)]="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="password" id="password" name="password" placeholder="Confirme su password" [(ngModel)]="password2"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <button ion-button color="primary" block (click)="formulario()">Registrarse</button>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+

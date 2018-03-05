@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { DataService } from '../../services/data.service';
 
 
 @Component({
@@ -14,7 +15,9 @@ export class Form3Page {
   ciudad = '';
   barrio = '';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private data: DataService) {
   }
 
   ionViewDidLoad() {
@@ -27,5 +30,6 @@ export class Form3Page {
     console.log(this.edad);
     console.log(this.ciudad);
     console.log(this.barrio);
+    this.data.showMessage();
   }
 }
