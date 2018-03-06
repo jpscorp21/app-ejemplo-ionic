@@ -2,19 +2,54 @@
 
   <ion-navbar>
     <ion-title>Nuevo Anime</ion-title>
+
+    <ion-buttons start>
+      <button ion-button (click)="cancel()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button strong (click)="add()" [disabled]="!isReadyToSave">
+        <ion-icon name="md-checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <form>
+<ion-content>
+  <form  [formGroup]="form" (ngSubmit)="createItem">
     <ion-grid>
       <ion-row>
         <ion-col>
           <ion-item>
             <ion-label for="titulo" floating>Titulo</ion-label>
-            <ion-input type="text" name="titulo" id="titulo" [(ngModel)]="titulo"></ion-input>
+            <ion-input type="text" name="titulo" id="titulo" formControlName="titulo"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label for="num_episodio" floating>Nº Episodios</ion-label>
+            <ion-input type="number" min="1" max="2000" id="num_episodio" name="num_episodio" formControlName="num_episodio"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label for="genero">Genero</ion-label>
+            <ion-select formControlName="genero" multiple="true" okText="Okay" cancelText="Dismiss">
+              <ion-option value="accion" selected="true">Accion</ion-option>
+              <ion-option value="terror">Terror</ion-option>
+              <ion-option value="shounen">Shounen</ion-option>
+              <ion-option value="shoujo">Shoujo</ion-option>
+              <ion-option value="comedia">Comedia</ion-option>
+              <ion-option value="romantica">Romantica</ion-option>
+            </ion-select>
           </ion-item>
         </ion-col>
       </ion-row>

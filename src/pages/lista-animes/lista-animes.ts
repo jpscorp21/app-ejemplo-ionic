@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { CreateAnimePage } from '../create-anime/create-anime';
-
-/**
- * Generated class for the ListaAnimesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AnimesService } from '../../services/animes/animes.service';
 
 @IonicPage()
 @Component({
@@ -16,9 +10,14 @@ import { CreateAnimePage } from '../create-anime/create-anime';
 })
 export class ListaAnimesPage {
 
+  animes: any = [];
+
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public modalCtrl: ModalController) {
+              public modalCtrl: ModalController,
+              private animesService: AnimesService) {
+
+     this.animes = this.animesService.query();
   }
 
   ionViewDidLoad() {
@@ -26,7 +25,19 @@ export class ListaAnimesPage {
   }
 
   addModal() {
-    this.modalCtrl.create(CreateAnimePage).present();
+    let addModal = this.modalCtrl.create(CreateAnimePage);
+
+    addModal.onDidDismiss(anime => {
+
+      if (anime) {
+        console.log(anime);
+        this.animesService.add(anime);
+      }
+
+    })
+
+    addModal.present();
+
   }
 
 }

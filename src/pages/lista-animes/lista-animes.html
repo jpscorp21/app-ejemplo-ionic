@@ -1,6 +1,9 @@
 <ion-header>
 
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Animes</ion-title>
   </ion-navbar>
 
@@ -9,12 +12,18 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item></button>
+    <ion-item *ngFor="let anime of animes; let i = index">
+      <ion-label>{{i + 1}} - {{ anime.titulo }}</ion-label>
+      <ion-note item-end>{{ anime.num_episodio }}</ion-note>
+    </ion-item>
   </ion-list>
 
-  <ion-fab bottom right>
-    <button ion-fab (click)="addModal()">
-      <ion-icon name="add"></ion-icon>
-    </button>
-  </ion-fab>
+  <div padding>
+    <ion-fab bottom right>
+      <button ion-fab (click)="addModal()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+
 </ion-content>

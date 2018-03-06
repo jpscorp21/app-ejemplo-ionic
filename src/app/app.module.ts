@@ -26,12 +26,14 @@ import { SignupPage} from '../pages/signup/signup';
 import { ListaPaisesPage } from '../pages/lista-paises/lista-paises';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ListaAnimesPage } from '../pages/lista-animes/lista-animes';
+import { PostsPage } from '../pages/posts/posts';
 // SERVICIOS
 
 import { RestApiService } from '../services/rest-api.service';
 import { DataService } from '../services/data.service';
 import { PaisesService } from '../services/paises/paises.service';
 import { CreateAnimePage } from '../pages/create-anime/create-anime';
+import { AnimesService } from '../services/animes/animes.service';
 
 
 
@@ -69,6 +71,7 @@ import { CreateAnimePage } from '../pages/create-anime/create-anime';
     ListaPaisesPage,
     ListaAnimesPage,
     CreateAnimePage,
+    PostsPage,
     //Formularios
     Form1Page, Form2Page, Form3Page
   ],
@@ -78,7 +81,8 @@ import { CreateAnimePage } from '../pages/create-anime/create-anime';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PaisesService,
     RestApiService,
-    DataService
+    DataService,
+    AnimesService
   ]
 })
 export class AppModule {}
