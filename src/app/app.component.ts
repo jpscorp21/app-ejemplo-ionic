@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ListaPaisesPage } from '../pages/lista-paises/lista-paises';
+import { ListaAnimesPage } from '../pages/lista-animes/lista-animes';
 
 
 @Component({
@@ -29,7 +30,8 @@ export class MyApp {
       { title: 'Inicio', component: HomePage },
       { title: 'Lista', component: ListPage },
       { title: 'Salir', component: WelcomePage},
-      { title: 'Paises', component: ListaPaisesPage }
+      { title: 'Paises', component: ListaPaisesPage },
+      { title: 'Animes', component: ListaAnimesPage }
     ];
 
   }

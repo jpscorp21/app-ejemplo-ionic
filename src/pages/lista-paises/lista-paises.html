@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>listaPaises</ion-title>
+    <ion-title>Paises</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -9,8 +9,8 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-button block>
-
+    <button ion-item block *ngFor="let pais of paises">
+      {{ pais.name }}
     </button>
   </ion-list>
 </ion-content>

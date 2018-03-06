@@ -5,7 +5,7 @@ import { RestApiService } from '../rest-api.service';
 export class PaisesService {
 
   constructor(private api: RestApiService) {
-    this.api.url = "https://restcountries.eu/rest/v2/";
+    this.api.url = "https://restcountries.eu/rest/v2";
   }
 
   query() {

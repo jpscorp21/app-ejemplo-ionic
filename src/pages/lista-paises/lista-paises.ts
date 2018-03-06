@@ -20,10 +20,9 @@ export class ListaPaisesPage {
     this.paisesService.query()
     .then((data) => {
       this.paises = data;
-      console.log(data);
     })
     .catch((error) => {
-      this.data.error(error);
+      this.data.error(error.message);
     });
   }
 

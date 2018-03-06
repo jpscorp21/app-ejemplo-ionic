@@ -25,11 +25,13 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage} from '../pages/signup/signup';
 import { ListaPaisesPage } from '../pages/lista-paises/lista-paises';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { ListaAnimesPage } from '../pages/lista-animes/lista-animes';
 // SERVICIOS
 
 import { RestApiService } from '../services/rest-api.service';
 import { DataService } from '../services/data.service';
 import { PaisesService } from '../services/paises/paises.service';
+import { CreateAnimePage } from '../pages/create-anime/create-anime';
 
 
 
@@ -43,6 +45,8 @@ import { PaisesService } from '../services/paises/paises.service';
     LoginPage,
     SignupPage,
     ListaPaisesPage,
+    ListaAnimesPage,
+    CreateAnimePage,
     //Formularios
     Form1Page, Form2Page, Form3Page
   ],
@@ -63,6 +67,8 @@ import { PaisesService } from '../services/paises/paises.service';
     LoginPage,
     SignupPage,
     ListaPaisesPage,
+    ListaAnimesPage,
+    CreateAnimePage,
     //Formularios
     Form1Page, Form2Page, Form3Page
   ],

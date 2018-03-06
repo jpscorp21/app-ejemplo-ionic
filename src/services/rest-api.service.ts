@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-Injectable()
+@Injectable()
 export class RestApiService {
 
-  url: string = "https://example/api/v1";
-  constructor(private http: HttpClient) {
+  url: string = "https://restcountries.eu/rest/v2";
+  constructor(public http: HttpClient) {
 
   }
 
