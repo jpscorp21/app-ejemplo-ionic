@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Posts</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let post of posts">
+    <ion-card-header>{{post.title}}</ion-card-header>
+    <ion-card-content>{{post.body}}</ion-card-content>
+  </ion-card>
+</ion-content>

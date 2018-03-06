@@ -34,6 +34,7 @@ import { DataService } from '../services/data.service';
 import { PaisesService } from '../services/paises/paises.service';
 import { CreateAnimePage } from '../pages/create-anime/create-anime';
 import { AnimesService } from '../services/animes/animes.service';
+import { PostsService } from '../services/posts/posts.service';
 
 
 
@@ -49,6 +50,7 @@ import { AnimesService } from '../services/animes/animes.service';
     ListaPaisesPage,
     ListaAnimesPage,
     CreateAnimePage,
+    PostsPage,
     //Formularios
     Form1Page, Form2Page, Form3Page
   ],
@@ -82,7 +84,8 @@ import { AnimesService } from '../services/animes/animes.service';
     PaisesService,
     RestApiService,
     DataService,
-    AnimesService
+    AnimesService,
+    PostsService
   ]
 })
 export class AppModule {}

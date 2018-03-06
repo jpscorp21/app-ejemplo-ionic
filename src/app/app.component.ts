@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ListaPaisesPage } from '../pages/lista-paises/lista-paises';
 import { ListaAnimesPage } from '../pages/lista-animes/lista-animes';
+import { PostsPage } from '../pages/posts/posts';
 
 
 @Component({
@@ -29,9 +30,10 @@ export class MyApp {
     this.pages = [
       { title: 'Inicio', component: HomePage },
       { title: 'Lista', component: ListPage },
-      { title: 'Salir', component: WelcomePage},
+      { title: 'Posts', component: PostsPage},
       { title: 'Paises', component: ListaPaisesPage },
-      { title: 'Animes', component: ListaAnimesPage }
+      { title: 'Animes', component: ListaAnimesPage },
+      { title: 'Salir', component: WelcomePage}
     ];
 
   }
