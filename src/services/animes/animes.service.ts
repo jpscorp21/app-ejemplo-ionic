@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Animes } from '../../models/animes';
 
 @Injectable()
 export class AnimesService {
@@ -20,10 +21,4 @@ export class AnimesService {
     this.animes.splice(this.animes.indexOf(anime), 1);
   }
 
-}
-
-export interface Animes {
-  titulo: string;
-  num_episodio: number;
-  genero: string[];
 }

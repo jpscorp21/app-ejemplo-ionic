@@ -25,6 +25,24 @@
       <ion-row>
         <ion-col>
           <ion-item>
+            <input type="file" #fileInput style="visibility: hidden; height: 0px;" name="files[]" (change)="processWebImage($event)">
+            <div class="profile-image-wrapper" (click)="getPicture()">
+              <div class="profile-image-placeholder" *ngIf="!this.form.controls.profilePic.value">
+                <ion-icon name="add"></ion-icon>
+                <div>
+                  Cargar
+                </div>
+              </div>
+              <div class="profile-image"
+                   *ngIf="this.form.controls.profilePic.value"
+                   [style.backgroundImage]="getProfileImageStyle()"></div>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
             <ion-label for="titulo" floating>Titulo</ion-label>
             <ion-input type="text" name="titulo" id="titulo" formControlName="titulo"></ion-input>
           </ion-item>
