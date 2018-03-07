@@ -4,12 +4,14 @@ import { RestApiService } from '../rest-api.service';
 @Injectable()
 export class PaisesService {
 
+  url: string;
+
   constructor(private api: RestApiService) {
-    this.api.url = "https://restcountries.eu/rest/v2";
+    this.url = "https://restcountries.eu/rest/v2";
   }
 
   query() {
-    return this.api.get("all");
+    return this.api.get(this.url, "all");
   }
 
 }

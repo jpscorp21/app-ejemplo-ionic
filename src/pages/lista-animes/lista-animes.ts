@@ -10,6 +10,9 @@ import { AnimesService } from '../../services/animes/animes.service';
 })
 export class ListaAnimesPage {
 
+
+  createAnimePage: CreateAnimePage;
+
   animes: any = [];
 
   constructor(public navCtrl: NavController,
@@ -30,7 +33,7 @@ export class ListaAnimesPage {
     addModal.onDidDismiss(anime => {
 
       if (anime) {
-        console.log(anime);
+        //console.log(anime);
         this.animesService.add(anime);
       }
 

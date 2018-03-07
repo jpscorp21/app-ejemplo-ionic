@@ -3,11 +3,12 @@ import { RestApiService } from "../rest-api.service";
 
 @Injectable()
 export class PostsService {
+  url: string;
   constructor(private api: RestApiService) {
-    this.api.url = "https://jsonplaceholder.typicode.com/posts";
+    this.url = "https://jsonplaceholder.typicode.com/posts";
   }
 
   query() {
-    return this.api.get("/");
+    return this.api.get(this.url, "/");
   }
 }

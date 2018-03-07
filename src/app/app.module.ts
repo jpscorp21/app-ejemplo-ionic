@@ -1,21 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
 import { MyApp } from './app.component';
 
+//NATIVAS
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicStorageModule, Storage } from '@ionic/storage';
+import { Camera } from '@ionic-native/camera';
 
 //MODULOS
-
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // PAGINAS
-
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Form1Page } from '../pages/form1/form1';
@@ -27,8 +26,8 @@ import { ListaPaisesPage } from '../pages/lista-paises/lista-paises';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ListaAnimesPage } from '../pages/lista-animes/lista-animes';
 import { PostsPage } from '../pages/posts/posts';
-// SERVICIOS
 
+// SERVICIOS
 import { RestApiService } from '../services/rest-api.service';
 import { DataService } from '../services/data.service';
 import { PaisesService } from '../services/paises/paises.service';
@@ -88,7 +87,8 @@ import { PostsDetailPage } from '../pages/posts-detail/posts-detail';
     RestApiService,
     DataService,
     AnimesService,
-    PostsService
+    PostsService,
+    Camera
   ]
 })
 export class AppModule {}
