@@ -35,6 +35,7 @@ import { PaisesService } from '../services/paises/paises.service';
 import { CreateAnimePage } from '../pages/create-anime/create-anime';
 import { AnimesService } from '../services/animes/animes.service';
 import { PostsService } from '../services/posts/posts.service';
+import { PostsDetailPage } from '../pages/posts-detail/posts-detail';
 
 
 
@@ -51,6 +52,7 @@ import { PostsService } from '../services/posts/posts.service';
     ListaAnimesPage,
     CreateAnimePage,
     PostsPage,
+    PostsDetailPage,
     //Formularios
     Form1Page, Form2Page, Form3Page
   ],
@@ -74,6 +76,7 @@ import { PostsService } from '../services/posts/posts.service';
     ListaAnimesPage,
     CreateAnimePage,
     PostsPage,
+    PostsDetailPage,
     //Formularios
     Form1Page, Form2Page, Form3Page
   ],

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PostsService } from '../../services/posts/posts.service';
 import { DataService } from '../../services/data.service';
-
+import { PostsDetailPage } from '../posts-detail/posts-detail';
 
 
 @IonicPage()
@@ -13,6 +13,8 @@ import { DataService } from '../../services/data.service';
 export class PostsPage {
 
   posts: any;
+
+  postsDetailPage: object = PostsDetailPage;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
