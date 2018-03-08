@@ -10,13 +10,15 @@
 <ion-content padding>
   <button ion-button secondary menuToggle>Abrir Menu</button>
   <h2>Formularios</h2>
-  <button ion-button [navPush]="form1Page" block color="danger">
-    Formulario 1
-  </button>
-  <button ion-button [navPush]="form2Page" block color="danger">
-    Formulario 2
-  </button>
-  <button ion-button [navPush]="form3Page" block color="danger">
-    Formulario 3
-  </button>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-sm-6 col-md-4 col-md-3 *ngFor="let form of forms">
+        <button ion-button [navPush]="form.page" block color="danger">
+          {{ form.title }}
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 </ion-content>

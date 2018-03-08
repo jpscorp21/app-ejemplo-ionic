@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Formulario 4</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" [(ngModel)]="nombre"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" [(ngModel)]="apellido"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Aceptar los terminos y condiciones</ion-label>
+            <ion-checkbox color="dark" checked="true"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-datetime displayFormat="MMM DD YYYY" placeholder="Ingrese su fechad de nacimiento"></ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" id="ciudad" name="ciudad" placeholder="Ingrese su ciudad" [(ngModel)]="ciudad"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" id="barrio" name="barrio" placeholder="Ingrese su barrio" [(ngModel)]="barrio"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <button ion-button color="primary" block (click)="formulario()">Aceptar</button>
+        <button ion-button color="primary" block navPop>Salir</button>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

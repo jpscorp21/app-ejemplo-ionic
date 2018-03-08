@@ -9,6 +9,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { ListaPaisesPage } from '../pages/lista-paises/lista-paises';
 import { ListaAnimesPage } from '../pages/lista-animes/lista-animes';
 import { PostsPage } from '../pages/posts/posts';
+import { PopoverPage } from '../pages/popover/popover';
 
 
 @Component({
@@ -33,7 +34,8 @@ export class MyApp {
       { title: 'Posts', component: PostsPage},
       { title: 'Paises', component: ListaPaisesPage },
       { title: 'Animes', component: ListaAnimesPage },
-      { title: 'Salir', component: WelcomePage}
+      { title: 'Popover', component: PopoverPage},
+      { title: 'Salir', component: WelcomePage},
     ];
 
   }
