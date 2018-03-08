@@ -1,9 +1,10 @@
 {
   "rules": {
     "no-duplicate-variable": true,
-    "no-unused-variable": [
-      true
-    ]
+    "no-unused-variable": [ true ],
+    "no-empty": true,
+    "max-line-length": [true, 120],
+    "trailing-comma": [ false ]
   },
   "rulesDirectory": [
     "node_modules/tslint-eslint-rules/dist/rules"

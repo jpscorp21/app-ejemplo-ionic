@@ -10,7 +10,8 @@ export class RestApiService {
 
   getHeaders() {
     const token = localStorage.getItem('token'); //Recibe el token del storage
-    return token ? new HttpHeaders().set('Authorization', token) : null; //Si existe el token se carga en la cabecera http y si no se queda null
+    //Si existe el token se carga en la cabecera http y si no se queda null
+    return token ? new HttpHeaders().set('Authorization', token) : null;
   }
 
   get(url: string, link: string) {
