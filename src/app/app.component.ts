@@ -3,14 +3,6 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { WelcomePage } from '../pages/welcome/welcome';
-import { ListaPaisesPage } from '../pages/lista-paises/lista-paises';
-import { ListaAnimesPage } from '../pages/lista-animes/lista-animes';
-import { PostsPage } from '../pages/posts/posts';
-import { PopoverPage } from '../pages/popover/popover';
-
 
 @Component({
   templateUrl: 'app.html'
@@ -20,7 +12,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = WelcomePage;
+  rootPage: any = 'WelcomePage';
 
   pages: Array<{title: string, component: any}>;
 
@@ -29,13 +21,13 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Inicio', component: HomePage },
-      { title: 'Lista', component: ListPage },
-      { title: 'Posts', component: PostsPage},
-      { title: 'Paises', component: ListaPaisesPage },
-      { title: 'Animes', component: ListaAnimesPage },
-      { title: 'Popover', component: PopoverPage},
-      { title: 'Salir', component: WelcomePage},
+      { title: 'Inicio', component: 'HomePage' },
+      { title: 'Lista', component: 'ListPage' },
+      { title: 'Posts', component: 'PostsPage'},
+      { title: 'Paises', component: 'ListaPaisesPage' },
+      { title: 'Animes', component: 'ListaAnimesPage' },
+      { title: 'Popover', component: 'PopoverPage' },
+      { title: 'Salir', component: 'WelcomePage' },
     ];
 
   }

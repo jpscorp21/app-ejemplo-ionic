@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { PaisesService } from '../../services/paises/paises.service';
 import { DataService } from '../../services/data.service';
 
@@ -15,14 +15,25 @@ export class ListaPaisesPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private paisesService: PaisesService,
-              private data: DataService) {
+              private data: DataService,
+              public loadingCtrl: LoadingController) {
+
+    this.showData();
+
+  }
+
+  showData() {
+    let loading = this.loadingCtrl.create();
+    loading.present();
 
     this.paisesService.query()
     .then((data) => {
       this.paises = data;
+      loading.dismiss();
     })
     .catch((error) => {
       this.data.error(error.message);
+      loading.dismiss();
     });
   }
 

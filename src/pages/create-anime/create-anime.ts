@@ -11,9 +11,12 @@ import { DataService } from '../../services/data.service';
 })
 export class CreateAnimePage {
 
+  //Extrae la etiqueta para acceder a sus metodos nativos
   @ViewChild('fileInput') fileInput;
 
+  //Condicion cuando se valide el formulario
   isReadyToSave: boolean;
+
 
   form: FormGroup;
 

@@ -9,5 +9,8 @@ import { PopoverMenuPage } from './popover-menu';
   imports: [
     IonicPageModule.forChild(PopoverMenuPage),
   ],
+  exports: [
+    PopoverMenuPage
+  ]
 })
 export class PopoverMenuPageModule {}

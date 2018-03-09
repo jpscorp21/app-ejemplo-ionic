@@ -9,5 +9,8 @@ import { PostsDetailPage } from './posts-detail';
   imports: [
     IonicPageModule.forChild(PostsDetailPage),
   ],
+  exports: [
+    PostsDetailPage
+  ]
 })
 export class PostsDetailPageModule {}

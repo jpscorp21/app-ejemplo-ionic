@@ -9,5 +9,8 @@ import { CreateAnimePage } from './create-anime';
   imports: [
     IonicPageModule.forChild(CreateAnimePage),
   ],
+  exports: [
+    CreateAnimePage
+  ]
 })
 export class CreateAnimePageModule {}

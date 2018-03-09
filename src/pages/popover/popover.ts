@@ -1,7 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
-import { PopoverMenuPage } from '../popover-menu/popover-menu';
-
 
 @IonicPage()
 @Component({
@@ -26,7 +24,7 @@ export class PopoverPage {
   }
 
   popoverPresent(ev) {
-    let popover = this.popoverCtrl.create(PopoverMenuPage, {
+    let popover = this.popoverCtrl.create('PopoverMenuPage', {
       contentEle: this.content.nativeElement,
       textEle: this.text.nativeElement
     });

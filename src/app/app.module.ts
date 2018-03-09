@@ -2,12 +2,11 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { MODULES, PROVIDERS, PAGES } from './app.imports';
+import { MODULES, PROVIDERS} from './app.imports';
 
 @NgModule({
   declarations: [
     MyApp,
-    PAGES
   ],
   imports: [
     MODULES,
@@ -16,7 +15,6 @@ import { MODULES, PROVIDERS, PAGES } from './app.imports';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    PAGES
   ],
   providers: [
     PROVIDERS,

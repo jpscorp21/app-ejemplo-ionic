@@ -7,11 +7,12 @@ import { Form3Page } from '../form3/form3';
 @NgModule({
   declarations: [
     Form1Page,
-    Form2Page,
-    Form3Page
   ],
   imports: [
     IonicPageModule.forChild(Form1Page),
   ],
+  exports: [
+    Form1Page
+  ]
 })
 export class Form1PageModule {}

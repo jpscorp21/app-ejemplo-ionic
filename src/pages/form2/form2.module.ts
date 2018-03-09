@@ -9,5 +9,8 @@ import { Form2Page } from './form2';
   imports: [
     IonicPageModule.forChild(Form2Page),
   ],
+  exports: [
+    Form2Page
+  ]
 })
 export class Form2PageModule {}

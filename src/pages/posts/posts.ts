@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { PostsService } from '../../services/posts/posts.service';
 import { DataService } from '../../services/data.service';
-import { PostsDetailPage } from '../posts-detail/posts-detail';
-
 
 @IonicPage()
 @Component({
@@ -14,23 +12,29 @@ export class PostsPage {
 
   posts: any;
 
-  postsDetailPage: object = PostsDetailPage;
-
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public postService: PostsService,
-              private data: DataService) {
+              private data: DataService,
+              public loadingCtrl: LoadingController) {
+
+    this.showData();
+  }
+
+  showData() {
+    let loading = this.loadingCtrl.create();
+
+    loading.present();
 
     this.postService.query()
     .then((data) => {
       this.posts = data;
+      loading.dismiss();
     })
     .catch((error) => {
       this.data.error(error.message);
+      loading.dismiss();
     });
-  }
-
-  ionViewDidLoad() {
 
   }
 

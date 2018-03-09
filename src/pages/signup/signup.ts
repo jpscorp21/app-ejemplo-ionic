@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DataService } from '../../services/data.service';
 
 @IonicPage()
 @Component({
@@ -10,8 +9,7 @@ import { DataService } from '../../services/data.service';
 export class SignupPage {
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams,
-              private data: DataService) {
+              public navParams: NavParams) {
   }
 
   ionViewDidLoad() {

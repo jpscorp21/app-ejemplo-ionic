@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataService } from '../../services/data.service';
-import { HomePage } from '../home/home';
-import { RestApiService } from '../../services/rest-api.service';
+
 
 @IonicPage()
 @Component({
@@ -18,8 +17,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    private data: DataService,
-    private api: RestApiService) {
+    private data: DataService,) {
   }
 
   ionViewDidLoad() {
@@ -44,7 +42,7 @@ export class LoginPage {
       } else {
         this.data.error(data['message']);
       }*/
-      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.setRoot('HomePage');
 
     } else {
       this.data.error('Los datos estan incorrectos');

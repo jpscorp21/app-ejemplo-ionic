@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-import { CreateAnimePage } from '../create-anime/create-anime';
 import { AnimesService } from '../../services/animes/animes.service';
 
 @IonicPage()
@@ -9,9 +8,6 @@ import { AnimesService } from '../../services/animes/animes.service';
   templateUrl: 'lista-animes.html',
 })
 export class ListaAnimesPage {
-
-
-  createAnimePage: CreateAnimePage;
 
   animes: any = [];
 
@@ -28,7 +24,7 @@ export class ListaAnimesPage {
   }
 
   addModal() {
-    let addModal = this.modalCtrl.create(CreateAnimePage);
+    let addModal = this.modalCtrl.create('CreateAnimePage');
 
     addModal.onDidDismiss(anime => {
 

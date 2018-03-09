@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, IonicPage } from 'ionic-angular';
 import { DataService } from '../../services/data.service';
 
-
+@IonicPage()
 @Component({
   selector: 'page-form3',
   templateUrl: 'form3.html',
